@@ -257,14 +257,14 @@ function changeVideo(videoId, number) {
                     <tr>
                         <td style="text-align:center;">${rank}</td> 
                         <td>\t\n<img src="./img/${horse_number}_n.png" style="width:20px">  ${horse_name}</td>
-                        <td>${jackey_name}</td>
-                        <td>${difference}</td>
-                        <td>${record}</td>
-                        <td>${dan}배</td>
-                        <td>${yun}배</td>
-                        <td>${hadicap}kg</td>
-                        <td>${horse_weight}</td>
-                        <td>${horse_age}세</td>
+                        <td style="text-align : right;">${jackey_name}</td>
+                        <td style="text-align : right;">${difference}</td>
+                        <td style="text-align : right;">${record}</td>
+                        <td style="text-align : right;">${dan}배</td>
+                        <td style="text-align : right;">${yun}배</td>
+                        <td style="text-align : right;">${hadicap}kg</td>
+                        <td style="text-align : right;">${horse_weight}</td>
+                        <td style="text-align : right;">${horse_age}세</td>
                     </td>`);
                 }
             }       
