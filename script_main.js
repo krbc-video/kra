@@ -260,11 +260,11 @@ function changeVideo(videoId, number) {
                         <td>${jackey_name}</td>
                         <td>${difference}</td>
                         <td>${record}</td>
-                        <td>${dan}</td>
-                        <td>${yun}</td>
-                        <td>${hadicap}</td>
+                        <td>${dan}배</td>
+                        <td>${yun}배</td>
+                        <td>${hadicap}kg</td>
                         <td>${horse_weight}</td>
-                        <td>${horse_age}</td>
+                        <td>${horse_age}세</td>
                     </td>`);
                 }
             }       
@@ -337,7 +337,7 @@ function changeLocation(loc) {
             btnElements[i].style.display = 'none';
         };
     noRace.style.display = 'block';
-    noRace.innerHTML = `<p style="color: black; font-size: 20px;"><span id="location"></span>🐴 달력의 날짜를 터치하세요.</p>`;
+    noRace.innerHTML = `<p style="color: black; font-size: 20px;"><span id="location"></span>🐴 달력의 날짜를 선택하세요.</p>`;
     
     
 }
