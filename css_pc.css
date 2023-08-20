@@ -146,7 +146,7 @@ body{
     border-style:groove;
     border-color: white;
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 1.0em;
     color: #1f1d1d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -189,7 +189,7 @@ body{
 .race-inform{
     width: 100%;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 /* #date,#rname,#distance {
@@ -254,6 +254,7 @@ body{
 
 #result-content{
     display: none;
+    font-size: 1.1em;
 }
 
 
