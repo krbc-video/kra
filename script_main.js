@@ -293,16 +293,18 @@ result_button.addEventListener('click', function() {
 });
 
 
+if (calendar_switch !== null){
+    calendar_switch.addEventListener('click', function() {
+        if (calenderElement.style.display === 'none') {
+            calenderElement.style.display = 'block';
+            calendar_switch.innerHTML = "달력접기▲"
+        } else {
+            calenderElement.style.display = 'none';
+            calendar_switch.innerHTML = "펼치기▼";
+        }
+    });
+}
 
-calendar_switch.addEventListener('click', function() {
-    if (calenderElement.style.display === 'none') {
-        calenderElement.style.display = 'block';
-        calendar_switch.innerHTML = "달력접기▲"
-    } else {
-        calenderElement.style.display = 'none';
-        calendar_switch.innerHTML = "펼치기▼";
-    }
-});
 
 
 
