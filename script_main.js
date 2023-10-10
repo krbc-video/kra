@@ -479,23 +479,26 @@ function run(date){ // 달력을 클릭했을 때 실행되는 함수
     raceBtnRenderer(selectedDate_L);
     
     
-    console.log("앙ㅇ아아아아아");
+    // 2023년 10월 9일 월요일 서울/제주 경주 시행함. 따라서 해당날짜 검정색 처리
     let day202310 = document.querySelector(".rd-month-label").textContent;
     if (day202310 === "2023년 10월") {
         let days = document.querySelectorAll(".rd-day-body");
         for (let i=0; i < days.length; i++){
             if (days[i].textContent === "09"){
-                console.log("찾았다", days[i]);
                 days[i].style.color = "black";
+            }
+        }
+        let weekend = document.querySelectorAll(".rd-day-head");
+        for (let i=0; i < weekend.length; i++){
+            if (weekend[i].textContent === "월"){
+                weekend[i].style.color = "black";
             }
         }
     }
     
-
 }
 
 function start(date) {
-
 
     var calendar = rome(inline_cal, {time: false, inputFormat: 'YYYY.MM.DD'});
     calendar.on('data', run);   
