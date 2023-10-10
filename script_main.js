@@ -434,6 +434,7 @@ function setDate(dateString) {
 
 function run(date){ // 달력을 클릭했을 때 실행되는 함수
     
+    
 
     setDateDropdown(date) // 달력 입력 위젯에 날짜 셋팅
     
@@ -476,6 +477,20 @@ function run(date){ // 달력을 클릭했을 때 실행되는 함수
     let selectedDate_L = `${location_} ${selectedDate}`; //'(서울) 2023.08.22' <- 지역 삽입
     document.querySelector("#result").value = selectedDate_L; //'id = result 요소에 '(서울) 2023.08.22' <- 지역 삽입
     raceBtnRenderer(selectedDate_L);
+    
+    
+    console.log("앙ㅇ아아아아아");
+    let day202310 = document.querySelector(".rd-month-label").textContent;
+    if (day202310 === "2023년 10월") {
+        let days = document.querySelectorAll(".rd-day-body");
+        for (let i=0; i < days.length; i++){
+            if (days[i].textContent === "09"){
+                console.log("찾았다", days[i]);
+                days[i].style.color = "black";
+            }
+        }
+    }
+    
 
 }
 
