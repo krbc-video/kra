@@ -15,6 +15,7 @@ let selectedDate = null;
 let noRace = document.querySelector('.noRace');
 let params = (new URL(document.location)).searchParams; 
 let race = params.get("race"); // 웹사이트 파라미터 ?race="2023.08.22_s1r" 형식으로 전달
+console.log('체크포인트1', race);
 
 const result_button = document.querySelector('#result-show-button');
 const result_content = document.querySelector('#result-content');
@@ -202,13 +203,13 @@ function changeVideo(videoId, number) {
             if (key.includes(race_key)) {
 
                 race_date.innerText = key+'경주';
-                race_name.innerText = data[key][0]["race_name"]
-                race_distance.innerText = data[key][0]["race_distance"]+'m'
-                race_grade.innerText = data[key][0]["grade"]
-                race_age.innerText = data[key][0]["age_condition"]
-                race_budam.innerText = data[key][0]["budam_condition"]
-                race_track.innerText = data[key][0]["track_condition"]
-                race_weather.innerText = data[key][0]["weather"]
+                race_name.innerText = data[key][0]["race_name"] ?? '';
+                race_distance.innerText = data[key][0]["race_distance"]+'m' ?? '' ; 
+                race_grade.innerText = data[key][0]["grade"] ?? '';
+                race_age.innerText = data[key][0]["age_condition"] ?? '';
+                race_budam.innerText = data[key][0]["budam_condition"] ?? '';
+                race_track.innerText = data[key][0]["track_condition"] ?? '';
+                race_weather.innerText = data[key][0]["weather"] ?? '';
                 if(data[key][0]["weather"] === '흐림'){
                     weather_icon.innerHTML = '☁'
                 }
@@ -240,17 +241,17 @@ function changeVideo(videoId, number) {
                         rank = '🥉'
                     }
                     
-                    let horse_number = data[key][i]["horse_number"];
+                    let horse_number = data[key][i]["horse_number"] ?? '';
                     //let number_img_url = `./img/${horse_number}_n.png`;
-                    let horse_name = data[key][i]["horse_name"];
-                    let jackey_name = data[key][i]["jackey_name"];
-                    let difference = data[key][i]["difference"];
-                    let record = data[key][i]["record"];
-                    let dan = data[key][i]["dan"];
-                    let yun = data[key][i]["yun"];
-                    let hadicap = data[key][i]["hadicap"];
-                    let horse_weight = data[key][i]["horse_weight"];
-                    let horse_age = data[key][i]["horse_age"];
+                    let horse_name = data[key][i]["horse_name"] ?? '';
+                    let jackey_name = data[key][i]["jackey_name"] ?? '';
+                    let difference = data[key][i]["difference"] ?? '';
+                    let record = data[key][i]["record"] ?? '';
+                    let dan = data[key][i]["dan"] ?? '';
+                    let yun = data[key][i]["yun"] ?? '';
+                    let hadicap = data[key][i]["hadicap"] ?? '';
+                    let horse_weight = data[key][i]["horse_weight"] ?? '';
+                    let horse_age = data[key][i]["horse_age"] ?? '';
 
 
                     race_table.insertAdjacentHTML('beforeend', `
